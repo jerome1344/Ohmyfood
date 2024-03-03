@@ -1,0 +1,5 @@
+@import "./utils/functions", "./utils/mixins", "./utils/variables";
+@import "./base/normalize.css", "./base/typography";
+@import "./layout/header", "./layout/footer";
+@import "./components/buttons", "./components/cards", "./components/loader";
+@import "./pages/home", "./pages/menu";

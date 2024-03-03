@@ -1,0 +1,9 @@
+@import "./base/normalize.css";
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__title {
+  color: #9356dc;
+}/*# sourceMappingURL=main.css.map */

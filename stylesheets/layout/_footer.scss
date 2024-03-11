@@ -1,0 +1,40 @@
+.footer {
+  background-color: $dark-grey;
+  &__logo {
+    width: 10rem;
+  }
+  &__list {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    gap: 1rem;
+    display: flex;
+    color: var(--White, #fff);
+    font-family: Roboto;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    &--light {
+      color: var(--White, #fff);
+      font-family: Roboto;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+.footer .container {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 12px; /* Adjust the width as needed */
+  height: 13px; /* Adjust the height as needed */
+  fill: white; /* Ensures the icon inherits the current text color */
+}

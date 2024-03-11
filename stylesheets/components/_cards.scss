@@ -1,0 +1,59 @@
+.card {
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: white;
+  box-sizing: border-box;
+  @include card-shadow;
+  &__image {
+    width: 100%;
+    height: 14.4375rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  &__content {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dish {
+  border-radius: 20px;
+  background-color: white;
+  box-sizing: border-box;
+  @include card-shadow;
+  &__content {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__title {
+    font-size: 1.125rem;
+  }
+  &__subtitle {
+    font-size: 1rem;
+  }
+  &__price {
+    display: flex;
+    font-weight: 700;
+    align-items: flex-end;
+  }
+}

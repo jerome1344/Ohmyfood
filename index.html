@@ -12,9 +12,8 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./stylesheets/main.css">
-    <!-- <link rel="stylesheet" href="./SASS/Base/Normalize.css"> -->
+    <!-- <link rel="stylesheet" href="./stylesheets/base/normalize.css"> -->
 
-    <link rel="icon" href="./img/favicon.ico" />
     <title>Accueil - ohmyfood!</title>
     <meta name="title" content="Accueil - ohmyfood!">
     <meta name="description"
@@ -23,100 +22,135 @@
 </head>
 
 <body>
-    <header class="header">
-        <img src="./Assets/Images/logo/ohmyfood@2x.svg" alt="Logo  oh my food">
-    </header>
-    <main>
-        <section class="location">
-            <i class="location__icon fa-solid fa-location-dot"></i>
-            <input class="location__city" placeholder="Paris, France"></input>
-        </section>
-        <section class="hero">
-            <h2 class="hero__title">Réservez le menu qui vous convient</h2>
-            <p class="hero__subtitle"></p>
-            <a href="#">Explorer nos restaurants</a>
-        </section>
-        <section class="fonction">
-            <div class="container">
-                <h2 class="fonction__title">Fonctionnement</h2>
-                <ol class="fonction__steps">
-                    <li class="fonction__item">
-                        <i class="fonction__icon"></i>
-                        <span class="fonction__txt">Choisissez un restaurant</span>
-                    </li>
-                    <li class="fonction__item">
-                        <i class="fonction__icon"></i>
-                        <span class="fonction__txt">Composez votre menu</span>
-                    </li>
-                    <li class="fonction__item">
-                        <i class="fonction__icon"></i>
-                        <span class="fonction__txt">Dégustez au restaurant</span>
-                    </li>
-                </ol>
-            </div>
-        </section>
-        <section class="restaurants">
-            <div class="container">
-                <h2 class="restaurants__title"></h2>
-                <div class="cards">
-                    <a class="card" href="#">
-                        <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" width="300px"
-                            alt="" class="card__image">
-                        <span class="card__badge">Nouveau</span>
-                        <div class="card__content">
-                            <div class="card__txt">
-                                <h3 class="card__title">La palette du goût</h3>
-                                <p class="card__subtitle">Ménilmontant</p>
-                            </div>
-                            <i class="card__icon fas fa-heart"></i>
-                        </div>
-                    </a>
-                    <a class="card" href="#">
-                        <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""
-                            width="300px" class="card__image">
-                        <span class="card__badge">Nouveau</span>
-                        <div class="card__content">
-                            <div class="card__txt">
-                                <h3 class="card__title"></h3>
-                                <p class="card__subtitle"></p>
-                            </div>
-                            <i class="card__icon"></i>
-                        </div>
-                    </a>
-                    <a class="card" href="#">
-                        <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""
-                            width="300px" class="card__image">
-                        <span class="card__badge">Nouveau</span>
-                        <div class="card__content">
-                            <div class="card__txt">
-                                <h3 class="card__title"></h3>
-                                <p class="card__subtitle"></p>
-                            </div>
-                            <i class="card__icon"></i>
-                        </div>
-                    </a>
+    <div class="main-container">
+        <header class="header">
+            <img class="header__logo" src="./Assets/Images/logo/ohmyfood@2x.svg" alt="Logo  oh my food">
+        </header>
+        <main>
+            <section class="location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <input class="location__city" placeholder="Paris, France"></input>
+            </section>
+            <section class="hero">
+                <h1 class="hero__title">Réservez le menu qui vous convient</h2>
+                    <p class="hero__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <a class="hero__button" href="#">Explorer nos restaurants</a>
+            </section>
+            <section class="function">
+                <div class="container">
 
+
+                    <!-- Faire le hover de couleur #9356dc sur les icons , surement les intégrer en inline plutot qu'en external  -->
+                    <!-- utiliser les font awesome devrait suffir  -->
+
+
+                    <h2 class="function__title">Fonctionnement</h2>
+                    <ol class="function__steps">
+                        <li class="function__item">
+                            <i class="function__icon"><svg class="home-icon" width="20" height="21" viewBox="0 0 20 21"
+                                    fill="none">
+                                    <use xlink:href="./Assets/icons/icons.svg#icon-choisir"></use>
+                                </svg></i>
+                            <span class="function__txt">Choisissez un restaurant</span>
+                        </li>
+                        <li class="function__item">
+                            <i class="fonction__icon"><svg class="home-icon" width="20" height="21" viewBox="0 0 20 21"
+                                    fill="none">
+                                    <use xlink:href="./Assets/icons/icons.svg#icon-composer"></use>
+                                </svg></i>
+                            <span class="function__txt">Composez votre menu</span>
+                        </li>
+                        <li class="function__item">
+                            <i class="function__icon"><svg class="home-icon" width="20" height="21" viewBox="0 0 20 21"
+                                    fill="none">
+                                    <use xlink:href="./Assets/icons/icons.svg#icon-deguster"></use>
+                                </svg></i>
+                            <span class="function__txt">Dégustez au restaurant</span>
+                        </li>
+                    </ol>
                 </div>
+            </section>
+            <section class="restaurants">
+                <div class="container">
+                    <h2 class="restaurants__title">Restaurants</h2>
+                    <div class="cards">
+                        <a class="card" href="./la-palette-du-gout.html">
+                            <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""
+                                class="card__image">
+                            <!-- <span class="card__badge">Nouveau</span> -->
+                            <div class="card__content">
+                                <div class="card__txt">
+                                    <h3 class="card__title">La palette du goût</h3>
+                                    <p class="card__subtitle">Ménilmontant</p>
+                                </div>
+                                <i class="card__icon fas fa-heart"></i>
+                            </div>
+                        </a>
+                        <a class="card" href="#">
+                            <img src="./Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt=""
+                                class="card__image">
+                            <!-- <span class="card__badge">Nouveau</span> -->
+                            <div class="card__content">
+                                <div class="card__txt">
+                                    <h3 class="card__title">La note enchantée</h3>
+                                    <p class="card__subtitle">Charonne</p>
+                                </div>
+                                <i class="card__icon fas fa-heart"></i>
+                            </div>
+                        </a>
+                        <a class="card" href="#">
+                            <img src="./Assets/Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt=""
+                                class="card__image">
+                            <!-- <span class="card__badge">Nouveau</span> -->
+                            <div class="card__content">
+                                <div class="card__txt">
+                                    <h3 class="card__title">À la française</h3>
+                                    <p class="card__subtitle">Cité Rouge</p>
+                                </div>
+                                <i class="card__icon fas fa-heart"></i>
+                            </div>
+                        </a>
+                        <a class="card" href="#">
+                            <img src="./Assets/Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt="" class="card__image">
+                            <!-- <span class="card__badge">Nouveau</span> -->
+                            <div class="card__content">
+                                <div class="card__txt">
+                                    <h3 class="card__title">Le délice des sens</h3>
+                                    <p class="card__subtitle">Folie-Méricourt</p>
+                                </div>
+                                <i class="card__icon fas fa-heart"></i>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <img class="footer__logo" src="./Assets/Images/logo/ohmyfoodwhite.svg" alt="">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link"><i class="footer__icon"> <svg class="icon" width="12"
+                                    height="13" viewBox="0 0 11 13" fill="none">
+                                    <use xlink:href="./Assets/icons/icons.svg#icon-restaurant"></use>
+                                </svg></i>Proposer un restaurant</a>
+                    </li>
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="footer__icon">
+                                <svg class="icon" width="12" height="13" viewBox="0 0 11 13" fill="none">
+                                    <use xlink:href="./Assets/icons/icons.svg#icon-partenaire"></use>
+                                </svg>
+                            </i>Devenir partenaire</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link--light">Mentions légales</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                </ul>
             </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <img src="./Assets/Images/logo/ohmyfood@2x.svg" alt="">
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <a href="#" class="footer__link"><i class="footer__icon"></i>Proposer un restaurant</a>
-                </li>
-                <li class="footer__item"><a href="#" class="footer__link"><i class="footer__icon"></i>Devenir
-                        partenaire</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Mentions légales</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
-            </ul>
-        </div>
-    </footer>
+        </footer>
 
 
 
+    </div>
 </body>
 
 </html>

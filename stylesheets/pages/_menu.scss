@@ -1,0 +1,66 @@
+.menu__container {
+  margin-top: -5rem;
+  background-color: $secondary-background;
+  z-index: 1;
+  position: relative;
+  padding-top: 2.5rem;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.menu__container h2 {
+  font-family: "shrikhand";
+}
+.menu__hero img {
+  // background-size: cover;
+  // background-position: center;
+  width: 100%;
+  max-width: 100%;
+  max-height: 30rem;
+  object-fit: cover;
+}
+.menu__grid {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem auto;
+  gap: 2.5rem;
+}
+
+.menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.menu__subtitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.menu__subtitle::after {
+  /* Permet d'afficher une border bottom avec une largeur libre */
+  content: "";
+  display: block;
+  width: 50px;
+  padding-top: 3px;
+  border-bottom: 5px solid $tertiary;
+}
+.menu__button {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  @include button-gradient;
+}
+
+

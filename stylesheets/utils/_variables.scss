@@ -1,2 +1,12 @@
+@use "sass:color";
 $primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$primary-background: #fff;
+$secondary-background: #f6f6f6;
+$light-grey: #eaeaea;
+$dark-grey: #353535;
+$shadow: rgba(0, 0, 0, 0.15);
 
+$primary-gradient: linear-gradient(to top, #9356dc, #ff79da);
+$transparent-gradient: linear-gradient(to top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%)

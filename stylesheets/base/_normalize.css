@@ -11,6 +11,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  max-width: 100%;
 }
 
 /* Sections
@@ -21,7 +22,8 @@ html {
    */
 
 body {
-  margin: 0;
+  margin: auto;
+  max-width: 1440px;
 }
 
 /**
@@ -31,7 +33,12 @@ body {
 main {
   display: block;
 }
+.main-container {
+  width: 100%;
+  max-width: 1440px;
 
+  box-sizing: border-box;
+}
 /**
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
@@ -42,6 +49,23 @@ h1 {
   margin: 0.67em 0;
 }
 
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+
+p {
+  font-size: 1.0625rem;
+  margin: 0;
+}
 /* Grouping content
      ========================================================================== */
 
@@ -75,6 +99,7 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
@@ -190,6 +215,13 @@ select {
   text-transform: none;
 }
 
+ol,
+ul {
+  all: initial;
+}
+li {
+  list-style: none;
+}
 /**
    * Correct the inability to style clickable types in iOS and Safari.
    */
@@ -198,8 +230,8 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
--webkit-appearance: button;
-appearance: button;
+  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**

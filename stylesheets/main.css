@@ -400,14 +400,15 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-duration: 0.3s;
-  color: black;
+  font-size: 1.5rem;
+  color: #353535;
   position: absolute;
   left: 2rem;
   bottom: 1.5rem;
+  transition: 0.3s ease-out;
 }
 .header__menu--arrow:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
   color: #9356dc;
 }
 
@@ -515,6 +516,11 @@ template {
   align-items: flex-end;
 }
 
+.fas {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 .container {
   padding: 1.88rem 1.5rem;
   max-width: 100%;
@@ -600,15 +606,25 @@ main .location__city {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  padding: 1.6rem 2rem;
+  padding: 1.6rem 1.6rem;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-out;
 }
-
-.icon {
-  width: 20px;
-  height: 21px;
+.function__item:hover {
+  transform: scale(1.02);
+}
+.function__item:hover .function__icon {
+  transform: scale(1.1);
+  color: #9356dc;
+}
+.function__icon {
+  color: #7e7e7e;
+  font-size: 1.25rem;
+}
+.function__txt {
+  font-weight: 500;
 }
 
 .restaurants {
@@ -625,6 +641,11 @@ main .location__city {
 .cards {
   width: 100%;
   box-sizing: border-box;
+}
+
+.icon {
+  width: 20px;
+  height: 21px;
 }
 
 .menu__container {

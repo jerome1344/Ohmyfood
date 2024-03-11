@@ -19,15 +19,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-duration: 0.3s;
-    color: black;
+    font-size: 1.5rem;
+    color: #353535;
     position: absolute;
     left: 2rem;
     bottom: 1.5rem;
-  }
-  &--arrow:hover {
-    transform: scale(1.3);
-    color: $primary;
+    @include arrow-animation;
   }
 }
 

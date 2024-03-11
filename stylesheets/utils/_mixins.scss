@@ -12,7 +12,6 @@
   box-shadow: 0 4px 15px 0 color.adjust($shadow, $alpha: -0.05);
 }
 
-
 @mixin button-gradient {
   background-blend-mode: overlay; /*Pour pouvoir stack les 2 gradients et faire l'effet attendu*/
   background: $primary-gradient;
@@ -20,5 +19,24 @@
   &:hover {
     background: $primary-gradient, $transparent-gradient;
     box-shadow: 0 4px 10px 0 rgba($shadow, $alpha: 0.35);
+  }
+}
+
+@mixin arrow-animation {
+  transition: 0.3s ease-out;
+  &:hover {
+    transform: scale(1.2);
+    color: $primary;
+  }
+}
+
+@mixin function-animation {
+  transition: 0.3s ease-out;
+  &:hover {
+    transform: scale(1.02);
+    .function__icon {
+      transform: scale(1.1);
+      color: $primary;
+    }
   }
 }

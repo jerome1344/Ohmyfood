@@ -18,19 +18,23 @@ html {
    */
 body {
   margin: auto;
-  max-width: 1440px;
+  width: 375px;
 }
 
 /**
    * Render the `main` element consistently in IE.
    */
+* {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
 main {
   display: block;
 }
 
 .main-container {
-  width: 100%;
-  max-width: 1440px;
+  max-width: 768px;
   box-sizing: border-box;
 }
 
@@ -100,8 +104,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -213,8 +216,7 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
-  -moz-appearance: button;
-       appearance: button;
+  appearance: button;
 }
 
 /**
@@ -298,8 +300,7 @@ textarea {
    */
 [type=search] {
   -webkit-appearance: textfield; /* 1 */
-  -moz-appearance: textfield;
-       appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px; /* 2 */
 }
 
@@ -349,11 +350,6 @@ template {
    */
 [hidden] {
   display: none;
-}
-
-* {
-  font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .fonction__txt {
@@ -466,8 +462,7 @@ template {
   height: 14.4375rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
 }
 .card__content {
@@ -480,6 +475,9 @@ template {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.card__icon {
+  font-size: 1.5rem;
 }
 
 .cards {
@@ -503,17 +501,24 @@ template {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish__title {
   font-size: 1.125rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dish__subtitle {
   font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dish__price {
   display: flex;
   font-weight: 700;
   align-items: flex-end;
+  padding-left: 1rem;
 }
 
 .fas {
@@ -653,6 +658,7 @@ main .location__city {
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
+  padding: 1.5rem;
   padding-top: 2.5rem;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -664,10 +670,10 @@ main .location__city {
 
 .menu__hero img {
   width: 100%;
+  min-height: 18rem;
   max-width: 100%;
-  max-height: 30rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-height: 35rem;
+  object-fit: cover;
 }
 
 .menu__grid {
@@ -681,6 +687,8 @@ main .location__city {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 95%;
+  font-size: 1.75rem;
 }
 
 .menu__bloc {
@@ -722,4 +730,6 @@ main .location__city {
 .menu__button:hover {
   background: linear-gradient(to top, #9356dc, #ff79da), linear-gradient(to top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.35);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

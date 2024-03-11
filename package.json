@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 4 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass --watch ./stylesheets/main.scss:./css/main.css"
+  },
+  "author": "jerome menoret",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.71.1"
+  }
+}

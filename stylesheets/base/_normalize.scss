@@ -23,19 +23,23 @@ html {
 
 body {
   margin: auto;
-  max-width: 1440px;
+  width: 375px;
 }
 
 /**
    * Render the `main` element consistently in IE.
    */
+* {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
 
 main {
   display: block;
 }
 .main-container {
-  width: 100%;
-  max-width: 1440px;
+  // width: 375px;
+  max-width: 768px;
 
   box-sizing: border-box;
 }

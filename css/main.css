@@ -18,7 +18,7 @@ html {
    */
 body {
   margin: auto;
-  width: 375px;
+  max-width: 1440px;
 }
 
 /**
@@ -34,7 +34,7 @@ main {
 }
 
 .main-container {
-  max-width: 768px;
+  max-width: 1440px;
   box-sizing: border-box;
 }
 

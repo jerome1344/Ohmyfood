@@ -22,10 +22,9 @@ html {
    */
 
 body {
-  margin: auto;
-  max-width: 1440px;
+  margin: 0;
+  // max-width: 1440px;
 }
-
 /**
    * Render the `main` element consistently in IE.
    */
@@ -38,9 +37,6 @@ main {
   display: block;
 }
 .main-container {
-  // width: 375px;
-  max-width: 1440px;
-
   box-sizing: border-box;
 }
 /**
@@ -49,7 +45,7 @@ main {
    */
 
 h1 {
-  font-size: 2em;
+  font-size: 1.75em;
   margin: 0.67em 0;
 }
 

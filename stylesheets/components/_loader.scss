@@ -1,0 +1,220 @@
+// LOADER page d'accueil   base : https://codepen.io/nxworld/pen/zwGpXr
+.loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  animation: loader-hide 3.5s forwards;
+  // background: linear-gradient(120deg, $tertiary 20%, $primary);
+  background: linear-gradient(360deg, $primary -40%, $light-grey 80%);
+}
+.loading {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 5rem;
+  }
+  span {
+    display: inline-block;
+    margin: 0 -0.05em;
+  }
+}
+.loading08 {
+  span {
+    position: relative;
+    color: rgba($dark-grey, 0.4);
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: attr(data-text);
+      color: rgba($dark-grey, 0.4);
+      opacity: 0;
+      animation: loading08-child 3s infinite;
+    }
+    @for $i from 1 through 7 {
+      &:nth-child(#{$i + 1})::after {
+        animation-delay: #{$i * 0.15}s;
+      }
+    }
+  }
+}
+@keyframes loading08-child {
+  0% {
+    color: rgba($secondary, 1);
+    text-shadow: 2px 35px 10px rgba($mid-grey, 0.75);
+    opacity: 1;
+  }
+  50% {
+    color: rgba($primary, 1);
+    opacity: 1;
+  }
+}
+
+//  LOADER mobile
+
+.background-loader {
+  position: fixed;
+  z-index: 300;
+  // background: linear-gradient(120deg, $primary -40%, $light-grey);
+  background: linear-gradient(180deg, $primary -40%, $light-grey 80%);
+  width: 100%;
+  height: 100%;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+.loader-text {
+  position: relative;
+  top: 75%;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 2px 3px 4px rgba($mid-grey, 1);
+}
+.spinner {
+  position: absolute;
+  opacity: 0.75;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 303;
+  border-radius: 100%;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+
+.spinner1 {
+  width: 100px;
+  height: 100px;
+  border: 10px solid $primary;
+  animation: spin 1s linear infinite;
+}
+
+.spinner2 {
+  width: 70px;
+  height: 70px;
+  border: 10px solid $tertiary;
+  animation: negative-spin 2.5s linear infinite;
+}
+
+.spinner3 {
+  width: 40px;
+  height: 40px;
+  border: 10px solid $secondary;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes negative-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes loader-hide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1100;
+  }
+}
+// Animation coeur
+
+/* Effet rebond */
+@keyframes heartAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.heart-toggle {
+  display: none;
+}
+
+.empty-heart,
+.full-heart {
+  display: none; /* Les 2 sont caché au départ */
+  cursor: pointer;
+}
+
+/* Checkbox non cliqué = coeur classique  */
+.heart-toggle:not(:checked) + .heart-label .empty-heart {
+  display: inline-block;
+  animation: heartAnimation 0.3s ease-in-out;
+}
+
+/* Checkbox cliqué == coeur rempli */
+.heart-toggle:checked + .heart-label .full-heart {
+  display: inline-block;
+  background: $primary-gradient;
+  background-clip: text;
+  color: transparent;
+  animation: heartAnimation 0.3s ease-in-out;
+}
+
+// Animation rotation menu
+
+@keyframes checkAnimation {
+  0% {
+    transform: rotate(-67.5deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

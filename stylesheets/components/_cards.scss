@@ -1,69 +1,159 @@
 .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   border-radius: 20px;
   background-color: white;
   box-sizing: border-box;
   @include card-shadow;
+  @media screen and (min-width: 1024px) {
+    width: calc(50% - 20px);
+    height: auto;
+  }
+  & a {
+    display: flex;
+    flex-direction: column;
+  }
   &__image {
     width: 100%;
-    height: 14.4375rem;
+    max-height: 100%;
+    min-height: 12rem;
+    height: 12rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
     overflow: hidden;
   }
-  &__content {
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__badge {
+    position: absolute;
+    padding: 0.475rem 1rem;
+    top: 1.25rem;
+    right: 1.75rem;
+    background-color: $tertiary;
+    // Ne correspond pas totalement à la couleur maquette mais permettait d'utiliser la fonction darken()
+    color: darken($tertiary, $amount: 45%);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    @include light-shadow;
   }
   &__txt {
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 0.5rem;
+    height: 100%;
+    box-sizing: border-box;
   }
   &__icon {
-    font-size: 1.5rem;
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 300;
+    bottom: 1.25rem;
+    right: 2rem;
+    color: black;
+    z-index: 1; // Pour être au dessus de l'ancre
+    cursor: pointer;
   }
 }
+
 .cards {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  box-sizing: border-box;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
+//  Cartes Menu
 
 .dish {
   border-radius: 20px;
+  overflow: hidden;
   background-color: white;
   box-sizing: border-box;
+  display: flex;
+  white-space: nowrap;
+  cursor: pointer;
   @include card-shadow;
+  
+
   &__content {
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
   }
   &__text {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding: 1rem 0 1rem 1rem;
     overflow: hidden;
-    white-space: nowrap;
   }
   &__title {
     font-size: 1.125rem;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
   &__subtitle {
     font-size: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
   &__price {
     display: flex;
     font-weight: 700;
     align-items: flex-end;
-    padding-left: 1rem;
+    justify-content: flex-end;
+    padding: 0 1rem 1rem 1rem;
+  }
+  &__selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    overflow: hidden;
+    background-color: $tertiary;
+    // transition: width 1.2s cubic-bezier(0.51, 1.55, 0.45, -0.81);
+    transition: width 1.2s ease-in-out;
+    &--icon {
+      padding: 0.3rem;
+      background-color: white;
+      border-radius: 50%;
+      color: $tertiary;
+      font-size: 1rem;
+    }
+  }
+  &:hover .dish__selection {
+    width: 20%;
+    @media screen and (min-width: 1024px) {
+      width: 15%;
+    }
+  }
+  &:hover .dish__selection--icon {
+    animation: checkAnimation 1s ease-in-out;
+  }
+
+  // propriété expérimental mais intéressant , animation d'apparatition on scroll
+  // https://scroll-driven-animations.style/tools/view-timeline/ranges/#range-start-name=entry&range-start-percentage=0&range-end-name=cover&range-end-percentage=10&view-timeline-axis=block&view-timeline-inset=0&subject-size=smaller&subject-animation=fly-in&interactivity=clicktodrag&show-areas=yes&show-fromto=yes&show-labels=yes
+  // Non fonctionnel sur Firefox et Safari
+  animation: fly-in linear forwards;
+  animation-timeline: view(block);
+  animation-range: entry-crossing 0% cover 18%; //  controler le point de départ de l'animation
+
+  @keyframes fly-in {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
 }

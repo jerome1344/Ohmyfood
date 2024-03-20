@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   padding: 1rem;
-  @include light-shadow;
   position: relative;
-  z-index: 1000;
+  z-index: 100;
+  @include light-shadow;
   &__logo {
     max-width: 100%;
   }

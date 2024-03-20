@@ -6,7 +6,12 @@ $primary-background: #fff;
 $secondary-background: #f6f6f6;
 $light-grey: #eaeaea;
 $dark-grey: #353535;
+$mid-grey: #7e7e7e;
 $shadow: rgba(0, 0, 0, 0.15);
 
 $primary-gradient: linear-gradient(to top, #9356dc, #ff79da);
-$transparent-gradient: linear-gradient(to top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%)
+$transparent-gradient: linear-gradient(
+  to top,
+  rgba(255, 255, 255, 0.15) 0%,
+  rgba(255, 255, 255, 0.2) 100%
+);

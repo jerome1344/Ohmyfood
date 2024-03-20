@@ -22,6 +22,28 @@
 </head>
 
 <body>
+    
+    <section class="loader-container">
+        <div class="loading loading08">
+            <span data-text="O">O</span>
+            <span data-text="H">H</span>
+            <span data-text="M">M</span>
+            <span data-text="Y">Y</span>
+            <span data-text="F">F</span>
+            <span data-text="O">O</span>
+            <span data-text="O">O</span>
+            <span data-text="D">D</span>
+        </div>
+        <div class="background-loader">
+            <div class="loader">
+              <span class="spinner spinner1"></span>
+              <span class="spinner spinner2"></span>
+              <span class="spinner spinner3"></span>
+              <br>
+              <span class="loader-text">OHMYFOOD...</span>
+            </div>
+          </div>
+    </section>
     <div class="main-container">
         <header class="header">
             <img class="header__logo" src="./Assets/Images/logo/ohmyfood@2x.svg" alt="Logo  oh my food">
@@ -38,11 +60,6 @@
             </section>
             <section class="function">
                 <div class="container">
-
-
-                    <!-- Faire le hover de couleur #9356dc sur les icons , surement les intégrer en inline plutot qu'en external  -->
-                    <!-- utiliser les font awesome devrait suffir  -->
-
 
                     <h2 class="function__title">Fonctionnement</h2>
                     <ol class="function__steps">
@@ -71,61 +88,96 @@
                 <div class="container">
                     <h2 class="restaurants__title">Restaurants</h2>
                     <div class="cards">
-                        <a class="card" href="./la-palette-du-gout.html">
-                            <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""
-                                class="card__image">
-                            <!-- <span class="card__badge">Nouveau</span> -->
-                            <div class="card__content">
+                        <article class="card">
+                            <a href="./la-palette-du-gout.html">
+                                <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""
+                                    class="card__image">
+                                <span class="card__badge">Nouveau</span>
                                 <div class="card__txt">
-                                    <h3 class="card__title">La palette du goût</h3>
-                                    <p class="card__subtitle">Ménilmontant</p>
+                                    <div class="card__title">
+                                        <h3>La palette du
+                                            goût</h3>
+                                    </div>
+                                    <div class="card__subtitle">
+                                        <p>Ménilmontant</p>
+                                    </div>
                                 </div>
-                                <i class="card__icon fa-regular fa-heart"></i>
+
+                            </a>
+                            <div class="card__icon">
+                                <input type="checkbox" id="1" class="heart-toggle">
+                                <label for="1" class="heart-label">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart full-heart"></i>
+                                </label>
                             </div>
-                        </a>
-                        <a class="card" href="#">
-                            <img src="./Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt=""
-                                class="card__image">
-                            <!-- <span class="card__badge">Nouveau</span> -->
-                            <div class="card__content">
+                        </article>
+                        <article class="card">
+                            <a href="./la-note-enchantée.html">
+                                <img src="./Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt=""
+                                    class="card__image">
+                                <span class="card__badge">Nouveau</span>
+
                                 <div class="card__txt">
                                     <h3 class="card__title">La note enchantée</h3>
-                                    <p class="card__subtitle">Charonne</p>
+                                    <p class="card__subtitle">Charonne</^p>
                                 </div>
-                                <i class="card__icon fa-regular fa-heart"></i>
+
+                            </a>
+                            <div class="card__icon">
+                                <input type="checkbox" id="2" class="heart-toggle">
+                                <label for="2" class="heart-label">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart full-heart"></i>
+                                </label>
                             </div>
-                        </a>
-                        <a class="card" href="#">
-                            <img src="./Assets/Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt=""
-                                class="card__image">
-                            <!-- <span class="card__badge">Nouveau</span> -->
-                            <div class="card__content">
+                        </article>
+                        <article class="card">
+                            <a href="./a-la-francaise.html">
+                                <img src="./Assets/Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt=""
+                                    class="card__image">
+
+
                                 <div class="card__txt">
                                     <h3 class="card__title">À la française</h3>
                                     <p class="card__subtitle">Cité Rouge</p>
                                 </div>
-                                <i class="card__icon fa-regular fa-heart"></i>
+
+                            </a>
+                            <div class="card__icon">
+                                <input type="checkbox" id="3" class="heart-toggle">
+                                <label for="3" class="heart-label">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart full-heart"></i>
+                                </label>
                             </div>
-                        </a>
-                        <a class="card" href="#">
-                            <img src="./Assets/Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="" class="card__image">
-                            <!-- <span class="card__badge">Nouveau</span> -->
-                            <div class="card__content">
+                        </article>
+                        <article class="card">
+                            <a href="./le-délice-des-sens.html">
+                                <img src="./Assets/Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                    alt="" class="card__image">
+
+
                                 <div class="card__txt">
                                     <h3 class="card__title">Le délice des sens</h3>
                                     <p class="card__subtitle">Folie-Méricourt</p>
                                 </div>
-                                <i class="card__icon fa-regular fa-heart"></i>
-                            </div>
-                        </a>
 
+                            </a>
+                            <div class="card__icon">
+                                <input type="checkbox" id="4" class="heart-toggle">
+                                <label for="4" class="heart-label">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart full-heart"></i>
+                                </label>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
-            <div class="container">
+            <div class="footer__container">
                 <img class="footer__logo" src="./Assets/Images/logo/ohmyfoodwhite.svg" alt="">
                 <ul class="footer__list">
                     <li class="footer__item">
@@ -139,8 +191,10 @@
                                     <use xlink:href="./Assets/icons/icons.svg#icon-partenaire"></use>
                                 </svg>
                             </i>Devenir partenaire</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link--light">Mentions légales</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                    <ul class="footer__list--light">
+                        <li class="footer__item"><a href="#" class="footer__link--light">Mentions légales</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link--light">Contact</a></li>
+                    </ul>
                 </ul>
             </div>
         </footer>

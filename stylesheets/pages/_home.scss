@@ -7,7 +7,12 @@
 
 .container {
   padding: 1.88rem 1.5rem;
-  max-width: 100%;
+  @media screen and (min-width: 1024px) {
+    padding: 1.88rem 6.4rem;
+  }
+  @media screen and (min-width: 1240px) {
+    padding: 1.88rem 13rem;
+  }
 }
 
 main .location {
@@ -18,8 +23,10 @@ main .location {
   align-items: center;
   text-align: center;
   position: relative;
-  z-index: 5;
-  @include mid-shadow;
+  z-index: 10;
+  @media screen and (max-width: 1024px) {
+    @include mid-shadow;
+  }
 
   &__icon {
     margin-right: 1rem;
@@ -70,9 +77,8 @@ main .location {
 
 .function {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0;
+  padding: 1.3rem 0;
+
   &__title {
     margin-bottom: 2rem;
   }
@@ -80,19 +86,55 @@ main .location {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-left: 0.8rem;
+    counter-reset: step; /* Reset counter outside the li elements */
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      margin-left: 0;
+      width: 100%;
+    }
   }
   &__item {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
-    padding: 1.6rem 1.6rem;
+    padding: 1.6rem 0.8rem 1.6rem 1.6rem;
     background-color: $secondary-background;
     border-radius: 20px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     @include function-animation;
+    position: relative;
+    &::before {
+      // Use the content property to display the current value of the 'step' counter
+      content: counter(step);
+      // Increment the 'step' counter for each item
+      counter-increment: step;
+      position: absolute;
+      left: 0;
+      // Move the pseudo-element 50% to the left to center it horizontally
+      transform: translateX(-50%);
+      background-color: $primary;
+      color: #fff;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    // Change the background color of the circle when hovering over the parent element
+    // &:hover::before {
+    //   background-color: $primary;
+    // }
+    @media screen and (min-width: 1024px) {
+      // width: 100%;
+      flex: 1;
+    }
   }
   &__icon {
-    color: #7e7e7e;
+    color: $mid-grey;
     font-size: 1.25rem;
   }
   &__txt {
@@ -109,10 +151,6 @@ main .location {
   &__title {
     margin: 2rem 0;
   }
-}
-.cards {
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .icon {

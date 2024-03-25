@@ -64,7 +64,7 @@
         animation-delay: #{$i * 1}s;
         .dish {
           opacity: 0;
-          animation: second-layer-animation 2s  forwards;
+          animation: second-layer-animation 2s forwards;
           @for $j from 0 through 4 {
             &:nth-child(#{$j + 1}) {
               // animation de chaque element de menu
@@ -118,12 +118,7 @@
     justify-content: center;
     width: 30%;
     margin: auto;
-    text-decoration: none;
-    text-align: center;
     align-items: center;
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 25px;
     @include button-gradient;
   }
 }

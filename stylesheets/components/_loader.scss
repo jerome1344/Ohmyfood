@@ -29,7 +29,7 @@
     margin: 0 -0.05em;
   }
 }
-.loading08 {
+.loading01 {
   span {
     position: relative;
     color: rgba($dark-grey, 0.4);
@@ -40,16 +40,19 @@
       content: attr(data-text);
       color: rgba($dark-grey, 0.4);
       opacity: 0;
-      animation: loading08-child 3s infinite;
+      animation: loading-child 3s infinite;
     }
     @for $i from 1 through 7 {
+      &:first-child::after {
+        animation-delay: 0.5s;
+      }
       &:nth-child(#{$i + 1})::after {
-        animation-delay: #{$i * 0.15}s;
+        animation-delay: #{0.5 + ($i * 0.15)}s;
       }
     }
   }
 }
-@keyframes loading08-child {
+@keyframes loading-child {
   0% {
     color: rgba($secondary, 1);
     text-shadow: 2px 35px 10px rgba($mid-grey, 0.75);
@@ -194,8 +197,10 @@
 .heart-toggle:checked + .heart-label .full-heart {
   display: inline-block;
   background: $primary-gradient;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: $primary;
   animation: heartAnimation 0.3s ease-in-out;
 }
 

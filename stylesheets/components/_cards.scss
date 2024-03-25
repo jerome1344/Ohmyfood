@@ -7,6 +7,7 @@
   background-color: white;
   box-sizing: border-box;
   @include card-shadow;
+  @include card-animation;
   @media screen and (min-width: 1024px) {
     width: calc(50% - 20px);
     height: auto;
@@ -80,7 +81,6 @@
   white-space: nowrap;
   cursor: pointer;
   @include card-shadow;
-  
 
   &__content {
     display: flex;
@@ -121,8 +121,7 @@
     width: 0;
     overflow: hidden;
     background-color: $tertiary;
-    // transition: width 1.2s cubic-bezier(0.51, 1.55, 0.45, -0.81);
-    transition: width 1.2s ease-in-out;
+    transition: width 0.75s ease-in-out;
     &--icon {
       padding: 0.3rem;
       background-color: white;
@@ -144,16 +143,16 @@
   // propriété expérimental mais intéressant , animation d'apparatition on scroll
   // https://scroll-driven-animations.style/tools/view-timeline/ranges/#range-start-name=entry&range-start-percentage=0&range-end-name=cover&range-end-percentage=10&view-timeline-axis=block&view-timeline-inset=0&subject-size=smaller&subject-animation=fly-in&interactivity=clicktodrag&show-areas=yes&show-fromto=yes&show-labels=yes
   // Non fonctionnel sur Firefox et Safari
-  animation: fly-in linear forwards;
-  animation-timeline: view(block);
-  animation-range: entry-crossing 0% cover 18%; //  controler le point de départ de l'animation
+  // animation: fly-in linear forwards;
+  // animation-timeline: view(block);
+  // animation-range: entry-crossing 0% cover 18%; //  controler le point de départ de l'animation
 
-  @keyframes fly-in {
-    from {
-      transform: translateY(100px);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
+  //   @keyframes fly-in {
+  //     from {
+  //       transform: translateY(100px);
+  //     }
+  //     to {
+  //       transform: translateY(0);
+  //     }
+  //   }
 }

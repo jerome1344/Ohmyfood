@@ -39,6 +39,7 @@ main .location {
     color: $dark-grey;
     font-weight: 500;
     font-size: 1rem;
+    text-overflow: ellipsis;
   }
 }
 
@@ -65,11 +66,6 @@ main .location {
     margin: 0;
   }
   &__button {
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 25px;
     @include button-gradient;
     margin: 1rem 0;
   }

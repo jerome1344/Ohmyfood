@@ -7,10 +7,8 @@
 
 .container {
   padding: 1.88rem 1.5rem;
-  @media screen and (min-width: 1024px) {
-    padding: 1.88rem 6.4rem;
-  }
-  @media screen and (min-width: 1240px) {
+  
+  @media screen and (min-width: 1024px) and (max-width:1920px)  {
     padding: 1.88rem 13rem;
   }
 }
@@ -84,7 +82,7 @@ main .location {
     gap: 2rem;
     margin-left: 0.8rem;
     counter-reset: step; /* Reset counter outside the li elements */
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1024px) and (max-width:1920px) {
       flex-direction: row;
       margin-left: 0;
       width: 100%;
@@ -123,7 +121,7 @@ main .location {
     // &:hover::before {
     //   background-color: $primary;
     // }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1024px) and (max-width:1920px) {
       flex: 1;
     }
   }

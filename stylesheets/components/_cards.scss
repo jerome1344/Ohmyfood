@@ -8,7 +8,7 @@
   box-sizing: border-box;
   @include card-shadow;
   @include card-animation;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) and (max-width:1920px) {
     width: calc(50% - 20px);
     height: auto;
   }
@@ -77,7 +77,7 @@
   flex-direction: column;
   gap: 2rem;
   box-sizing: border-box;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) and (max-width:1920px){
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -144,7 +144,7 @@
   }
   &:hover .dish__selection {
     width: 20%;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1024px) and (max-width:1920px){
       width: 15%;
     }
   }

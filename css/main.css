@@ -481,7 +481,7 @@ template {
   transform: scale(1.1);
   color: #9356dc;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .header__menu--arrow {
     left: 18rem;
   }
@@ -490,7 +490,7 @@ template {
 .footer {
   background-color: #353535;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer {
     padding-top: 2rem;
   }
@@ -498,7 +498,7 @@ template {
 .footer__logo {
   width: 10rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer__logo {
     order: 1;
   }
@@ -508,7 +508,7 @@ template {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer__list {
     flex-direction: row;
     gap: 1rem;
@@ -519,7 +519,7 @@ template {
   flex-direction: column;
   gap: 0.5rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer__list--light {
     flex-direction: row;
     gap: 1rem;
@@ -529,7 +529,7 @@ template {
 .footer__item {
   display: flex;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer__item {
     align-items: flex-end;
   }
@@ -544,7 +544,7 @@ template {
   font-weight: 500;
   line-height: normal;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer__link {
     align-items: flex-end;
   }
@@ -557,7 +557,7 @@ template {
   font-weight: 400;
   line-height: normal;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer__icon {
     display: flex;
     align-items: flex-end;
@@ -571,7 +571,7 @@ template {
   flex-direction: column;
   gap: 1rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .footer__container {
     flex-direction: row;
     justify-content: flex-end;
@@ -600,7 +600,7 @@ template {
 .card:hover {
   transform: scale(1.015);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .card {
     width: calc(50% - 20px);
     height: auto;
@@ -670,7 +670,7 @@ template {
   gap: 2rem;
   box-sizing: border-box;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .cards {
     flex-direction: row;
     flex-wrap: wrap;
@@ -738,7 +738,7 @@ template {
 .dish:hover .dish__selection {
   width: 20%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .dish:hover .dish__selection {
     width: 15%;
   }
@@ -798,7 +798,7 @@ template {
     display: none;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .loading {
     font-size: 5rem;
   }
@@ -938,12 +938,7 @@ template {
 .container {
   padding: 1.88rem 1.5rem;
 }
-@media screen and (min-width: 1024px) {
-  .container {
-    padding: 1.88rem 6.4rem;
-  }
-}
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .container {
     padding: 1.88rem 13rem;
   }
@@ -1034,7 +1029,7 @@ main .location__city {
   margin-left: 0.8rem;
   counter-reset: step; /* Reset counter outside the li elements */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .function__steps {
     flex-direction: row;
     margin-left: 0;
@@ -1075,7 +1070,7 @@ main .location__city {
   align-items: center;
   font-size: 0.8rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .function__item {
     flex: 1;
   }
@@ -1131,7 +1126,7 @@ main .location__city {
     margin: -5rem 5rem 0 5rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
   .menu__container {
     margin: -5rem 13rem 0 13rem;
   }

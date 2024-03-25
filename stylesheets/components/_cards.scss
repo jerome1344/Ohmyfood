@@ -47,6 +47,18 @@
     gap: 0.5rem;
     height: 100%;
     box-sizing: border-box;
+    color: #000;
+    font-family: Roboto;
+    line-height: normal;
+    font-style: normal;
+  }
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  &__subtitle {
+    font-size: 1.0625rem;
+    font-weight: 300;
   }
   &__icon {
     position: absolute;

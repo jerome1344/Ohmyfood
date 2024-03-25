@@ -1,6 +1,9 @@
 @use "sass:color";
 @import "./utils/functions", "./utils/mixins", "./utils/variables";
-@import "./base/normalize", "./base/typography";
+@import "./base/normalize", "./base/typography", "./base/animations";
 @import "./layout/header", "./layout/footer";
-@import "./components/buttons", "./components/cards", "./components/loader";
+@import "./components/buttons", "./components/cards", "./components/heart",
+  "./components/loader";
 @import "./pages/home", "./pages/menu";
+
+/* Les fichiers vident restent pour l'exemple d'un 7-1 pattern */

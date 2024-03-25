@@ -1,6 +1,4 @@
 .hero-menu img {
-  // background-size: cover;
-  // background-position: center;
   width: 100%;
   min-height: 18rem;
   max-width: 100%;
@@ -57,10 +55,11 @@
     gap: 1rem;
     opacity: 0;
 
-    @for $i from 0 through 3 {
+    @for $i from 0 through 4 {
       &:nth-child(#{$i + 1}) {
         // animation des blocs
         animation: menu-pop 1.2s ease forwards;
+        // #{$i + 1} : C'est une interpolation Sass
         animation-delay: #{$i * 1}s;
         .dish {
           opacity: 0;
@@ -75,29 +74,6 @@
       }
     }
   }
-  @keyframes second-layer-animation {
-    from {
-      transform: scale(0);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.02);
-    }
-  }
-
-  @keyframes menu-pop {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
   &__subtitle {
     text-transform: uppercase;
     font-weight: 300;

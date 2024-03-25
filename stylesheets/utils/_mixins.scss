@@ -23,7 +23,7 @@
   box-shadow: 0 4px 10px 0 rgba($color: $shadow, $alpha: 0.25);
   transition: all 0.3s ease-in-out;
   &:hover {
-    // background: $primary-gradient, $transparent-gradient;
+    // background: $primary-gradient, $transparent-gradient; essai non concluant
     opacity: 0.85;
     box-shadow: 0 4px 15px 0 rgba($shadow, $alpha: 0.35);
     transform: scale(1.008);

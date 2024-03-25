@@ -52,24 +52,14 @@
     }
   }
 }
-@keyframes loading-child {
-  0% {
-    color: rgba($secondary, 1);
-    text-shadow: 2px 35px 10px rgba($mid-grey, 0.75);
-    opacity: 1;
-  }
-  50% {
-    color: rgba($primary, 1);
-    opacity: 1;
-  }
-}
+
 
 //  LOADER mobile
 
 .background-loader {
   position: fixed;
   z-index: 300;
-  // background: linear-gradient(120deg, $primary -40%, $light-grey);
+
   background: linear-gradient(180deg, $primary -40%, $light-grey 80%);
   width: 100%;
   height: 100%;
@@ -129,97 +119,6 @@
   animation: spin 2.5s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
-}
 
-@keyframes negative-spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
-}
 
-@keyframes loader-hide {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1100;
-  }
-}
-// Animation coeur
 
-/* Effet rebond */
-@keyframes heartAnimation {
-  0% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-}
-
-.heart-toggle {
-  display: none;
-}
-
-.empty-heart,
-.full-heart {
-  display: none; /* Les 2 sont caché au départ */
-  cursor: pointer;
-}
-
-/* Checkbox non cliqué = coeur classique  */
-.heart-toggle:not(:checked) + .heart-label .empty-heart {
-  display: inline-block;
-  animation: heartAnimation 0.3s ease-in-out;
-}
-
-/* Checkbox cliqué == coeur rempli */
-.heart-toggle:checked + .heart-label .full-heart {
-  display: inline-block;
-  background: $primary-gradient;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: $primary;
-  animation: heartAnimation 0.3s ease-in-out;
-}
-
-// Animation rotation menu
-
-@keyframes checkAnimation {
-  0% {
-    transform: rotate(-67.5deg);
-  }
-  50% {
-    transform: rotate(90deg);
-  }
-  75% {
-    transform: rotate(-45deg);
-  }
-  90% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}

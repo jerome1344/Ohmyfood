@@ -351,29 +351,104 @@ template {
   display: none;
 }
 
-.fonction__txt {
-  color: #000;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+/* Desktop loader animation */
+@keyframes loading-child {
+  0% {
+    color: #ff79da;
+    text-shadow: 2px 35px 10px rgba(126, 126, 126, 0.75);
+    opacity: 1;
+  }
+  50% {
+    color: #9356dc;
+    opacity: 1;
+  }
 }
-
-.card__txt {
-  color: #000;
-  font-family: Roboto;
-  line-height: normal;
-  font-style: normal;
+/* Mobile loader animation */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
 }
-.card__txt__title {
-  font-size: 1.125rem;
-  font-weight: 700;
+@keyframes negative-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
-.card__txt__subtitle {
-  font-size: 1.0625rem;
-  font-weight: 300;
+/* stop loader animation */
+@keyframes loader-hide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1100;
+  }
 }
-
+/* Menu apparition animation */
+@keyframes menu-pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Menu scale animation */
+@keyframes second-layer-animation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+/* Effet rebond coeur */
+@keyframes heartAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+/* check mark rotation */
+@keyframes checkAnimation {
+  0% {
+    transform: rotate(-67.5deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -565,6 +640,18 @@ template {
   gap: 0.5rem;
   height: 100%;
   box-sizing: border-box;
+  color: #000;
+  font-family: Roboto;
+  line-height: normal;
+  font-style: normal;
+}
+.card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.card__subtitle {
+  font-size: 1.0625rem;
+  font-weight: 300;
 }
 .card__icon {
   position: absolute;
@@ -660,6 +747,33 @@ template {
   animation: checkAnimation 1s ease-in-out;
 }
 
+.heart-toggle {
+  display: none;
+}
+
+.empty-heart,
+.full-heart {
+  display: none; /* Les 2 sont caché au départ */
+  cursor: pointer;
+}
+
+/* Checkbox non cliqué = coeur classique  */
+.heart-toggle:not(:checked) + .heart-label .empty-heart {
+  display: inline-block;
+  animation: heartAnimation 0.3s ease-in-out;
+}
+
+/* Checkbox cliqué == coeur rempli */
+.heart-toggle:checked + .heart-label .full-heart {
+  display: inline-block;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #9356dc;
+  animation: heartAnimation 0.3s ease-in-out;
+}
+
 .loader-container {
   position: fixed;
   width: 100%;
@@ -750,17 +864,6 @@ template {
   animation-delay: 1.55s;
 }
 
-@keyframes loading-child {
-  0% {
-    color: #ff79da;
-    text-shadow: 2px 35px 10px rgba(126, 126, 126, 0.75);
-    opacity: 1;
-  }
-  50% {
-    color: #9356dc;
-    opacity: 1;
-  }
-}
 .background-loader {
   position: fixed;
   z-index: 300;
@@ -827,93 +930,6 @@ template {
   animation: spin 2.5s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
-}
-@keyframes negative-spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
-}
-@keyframes loader-hide {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1100;
-  }
-}
-/* Effet rebond */
-@keyframes heartAnimation {
-  0% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-}
-.heart-toggle {
-  display: none;
-}
-
-.empty-heart,
-.full-heart {
-  display: none; /* Les 2 sont caché au départ */
-  cursor: pointer;
-}
-
-/* Checkbox non cliqué = coeur classique  */
-.heart-toggle:not(:checked) + .heart-label .empty-heart {
-  display: inline-block;
-  animation: heartAnimation 0.3s ease-in-out;
-}
-
-/* Checkbox cliqué == coeur rempli */
-.heart-toggle:checked + .heart-label .full-heart {
-  display: inline-block;
-  background: linear-gradient(to top, #9356dc, #ff79da);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #9356dc;
-  animation: heartAnimation 0.3s ease-in-out;
-}
-
-@keyframes checkAnimation {
-  0% {
-    transform: rotate(-67.5deg);
-  }
-  50% {
-    transform: rotate(90deg);
-  }
-  75% {
-    transform: rotate(-45deg);
-  }
-  90% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 .fas {
   width: 1.25rem;
   height: 1.25rem;
@@ -1069,7 +1085,11 @@ main .location__city {
   font-size: 1.25rem;
 }
 .function__txt {
+  color: #000;
+  font-size: 1rem;
+  font-style: normal;
   font-weight: 500;
+  line-height: normal;
 }
 
 .restaurants {
@@ -1242,26 +1262,28 @@ main .location__city {
 .menu__bloc:nth-child(4) .dish:nth-child(5) {
   animation-delay: 2.86s;
 }
-@keyframes second-layer-animation {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.02);
-  }
+.menu__bloc:nth-child(5) {
+  animation: menu-pop 1.2s ease forwards;
+  animation-delay: 4s;
 }
-@keyframes menu-pop {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.menu__bloc:nth-child(5) .dish {
+  opacity: 0;
+  animation: second-layer-animation 2s forwards;
+}
+.menu__bloc:nth-child(5) .dish:nth-child(1) {
+  animation-delay: 2.64s;
+}
+.menu__bloc:nth-child(5) .dish:nth-child(2) {
+  animation-delay: 2.86s;
+}
+.menu__bloc:nth-child(5) .dish:nth-child(3) {
+  animation-delay: 3.08s;
+}
+.menu__bloc:nth-child(5) .dish:nth-child(4) {
+  animation-delay: 3.3s;
+}
+.menu__bloc:nth-child(5) .dish:nth-child(5) {
+  animation-delay: 3.52s;
 }
 .menu__subtitle {
   text-transform: uppercase;
@@ -1301,5 +1323,7 @@ main .location__city {
 .menu__button:active {
   transform: scale(1.05);
 }
+
+/* Les fichiers vident restent pour l'exemple d'un 7-1 pattern */
 
 /*# sourceMappingURL=main.css.map */

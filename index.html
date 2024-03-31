@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/main.css">
 
     <title>Accueil - ohmyfood!</title>
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <section class="loader-container">
+    <div class="loader-container">
         <!-- Loader desktop -->
         <div class="loading loading01">
             <span data-text="O">O</span>
@@ -43,20 +43,20 @@
                 <span class="loader-text">OHMYFOOD...</span>
             </div>
         </div>
-    </section>
+    </div>
     <div class="main-container">
         <header class="header">
             <img class="header__logo" src="./Assets/Images/logo/ohmyfood@2x.svg" alt="Logo  oh my food">
         </header>
         <main>
-            <section class="location">
+            <div class="location">
                 <i class="location__icon fa-solid fa-location-dot"></i>
-                <input class="location__city" placeholder="Paris, France"></input>
-            </section>
+                <input class="location__city" placeholder="Paris, France">
+            </div>
             <section class="hero">
-                <h1 class="hero__title">Réservez le menu qui vous convient</h2>
-                    <p class="hero__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <a class="hero__button primary__button" href="#restaurants">Explorer nos restaurants</a>
+                <h1 class="hero__title">Réservez le menu qui vous convient</h1>
+                <p class="hero__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a class="hero__button primary__button" href="#restaurants">Explorer nos restaurants</a>
             </section>
             <section class="function">
                 <div class="container">
@@ -65,7 +65,6 @@
                     <ol class="function__steps">
                         <li class="function__item">
                             <i class=" function__icon fas fa-mobile-screen-button"></i>
-                            </i>
                             <span class="function__txt">Choisissez un restaurant</span>
                         </li>
                         <li class="function__item">
@@ -84,7 +83,7 @@
                     <h2 class="restaurants__title">Restaurants</h2>
                     <div class="cards">
                         <article class="card">
-                            <a href="./la-palette-du-gout.html">
+                            <a href="./Assets/menus/la-palette-du-gout.html">
                                 <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                                     alt="Une assiette du restaurant la palette du goût" class="card__image">
                                 <span class="card__badge">Nouveau</span>
@@ -109,7 +108,7 @@
                             </div>
                         </article>
                         <article class="card">
-                            <a href="./la-note-enchantee.html">
+                            <a href="./Assets/menus/la-note-enchantee.html">
                                 <img src="./Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                                     alt="Une assiette du restaurant la note enchantée" class="card__image">
                                 <span class="card__badge">Nouveau</span>
@@ -129,7 +128,7 @@
                             </div>
                         </article>
                         <article class="card">
-                            <a href="./a-la-francaise.html">
+                            <a href="./Assets/menus/a-la-francaise.html">
                                 <img src="./Assets/Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                                     alt="Une assiette du restaurant à la française" class="card__image">
 
@@ -149,7 +148,7 @@
                             </div>
                         </article>
                         <article class="card">
-                            <a href="./le-delice-des-sens.html">
+                            <a href="./Assets/menus/le-delice-des-sens.html">
                                 <img src="./Assets/Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                                     alt="Une assiette du restaurant le délice des sens" class="card__image">
 
@@ -187,11 +186,11 @@
                                     <use xlink:href="./Assets/icons/icons.svg#icon-partenaire"></use>
                                 </svg>
                             </i>Devenir partenaire</a></li>
-                    <ul class="footer__list--light">
-                        <li class="footer__item"><a href="#" class="footer__link--light">Mentions légales</a></li>
-                        <li class="footer__item"><a href="mailto:email@exemple.com"
-                                class="footer__link--light">Contact</a></li>
-                    </ul>
+                </ul>
+                <ul class="footer__list--light">
+                    <li class="footer__item"><a href="#" class="footer__link--light">Mentions légales</a></li>
+                    <li class="footer__item"><a href="mailto:email@exemple.com" class="footer__link--light">Contact</a>
+                    </li>
                 </ul>
             </div>
         </footer>

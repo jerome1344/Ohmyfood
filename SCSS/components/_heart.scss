@@ -1,26 +1,25 @@
 .heart-toggle {
-    display: none;
-  }
-  
-  .empty-heart,
-  .full-heart {
-    display: none; /* Les 2 sont caché au départ */
-    cursor: pointer;
-  }
-  
-  /* Checkbox non cliqué = coeur classique  */
-  .heart-toggle:not(:checked) + .heart-label .empty-heart {
-    display: inline-block;
-    animation: heartAnimation 0.3s ease-in-out;
-  }
-  
-  /* Checkbox cliqué == coeur rempli */
-  .heart-toggle:checked + .heart-label .full-heart {
-    display: inline-block;
-    background: $primary-gradient;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: $primary;
-    animation: heartAnimation 0.3s ease-in-out;
-  }
+  display: none;
+}
+
+.empty-heart,
+.full-heart {
+  display: none; /* Les 2 sont caché au départ */
+  cursor: pointer;
+}
+
+/* Checkbox non cliqué = coeur classique  */
+.heart-toggle:not(:checked) + .heart-label .empty-heart {
+  display: inline-block;
+  animation: heartAnimation 0.3s ease-in-out;
+}
+
+/* Checkbox cliqué == coeur rempli */
+.heart-toggle:checked + .heart-label .full-heart {
+  display: inline-block;
+  background: $primary-gradient;
+  color: transparent;
+  background-clip: text;
+
+  animation: heartAnimation 0.3s ease-in-out;
+}

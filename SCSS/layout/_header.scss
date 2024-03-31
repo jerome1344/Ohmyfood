@@ -1,3 +1,5 @@
+
+/* Header */
 .header {
   display: flex;
   justify-content: center;
@@ -14,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+/* Flèche Header */
 
   &--arrow {
     display: flex;
@@ -31,7 +34,3 @@
     }
   }
 }
-
-// .header__menu img {
-//   margin: 0 auto;
-// }

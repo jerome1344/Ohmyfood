@@ -1,3 +1,5 @@
+/* Cartes page d'accueil*/
+
 .card {
   position: relative;
   display: flex;
@@ -8,7 +10,7 @@
   box-sizing: border-box;
   @include card-shadow;
   @include card-animation;
-  @media screen and (min-width: 1024px) and (max-width:1920px) {
+  @media screen and (min-width: 1024px) and (max-width: 1920px) {
     width: calc(50% - 20px);
     height: auto;
   }
@@ -77,12 +79,12 @@
   flex-direction: column;
   gap: 2rem;
   box-sizing: border-box;
-  @media screen and (min-width: 1024px) and (max-width:1920px){
+  @media screen and (min-width: 1024px) and (max-width: 1920px) {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-//  Cartes Menu
+/*  Cartes Menu */
 
 .dish {
   border-radius: 20px;
@@ -133,7 +135,7 @@
     width: 0;
     overflow: hidden;
     background-color: $tertiary;
-    transition: width 0.75s ease-in-out;
+    transition: width 0.6s ease-in-out;
     &--icon {
       padding: 0.3rem;
       background-color: white;
@@ -144,7 +146,7 @@
   }
   &:hover .dish__selection {
     width: 20%;
-    @media screen and (min-width: 1024px) and (max-width:1920px){
+    @media screen and (min-width: 1024px) and (max-width: 1920px) {
       width: 15%;
     }
   }

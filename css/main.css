@@ -449,6 +449,7 @@ template {
     transform: rotate(0deg);
   }
 }
+/* Header */
 .header {
   display: flex;
   justify-content: center;
@@ -465,6 +466,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Flèche Header */
 }
 .header__menu--arrow {
   display: flex;
@@ -487,6 +489,7 @@ template {
   }
 }
 
+/*Footer*/
 .footer {
   background-color: #353535;
 }
@@ -581,11 +584,12 @@ template {
 }
 
 .icon {
-  width: 12px; /* Adjust the width as needed */
-  height: 13px; /* Adjust the height as needed */
-  fill: white; /* Ensures the icon inherits the current text color */
+  width: 12px;
+  height: 13px;
+  fill: white;
 }
 
+/* Cartes page d'accueil*/
 .card {
   position: relative;
   display: flex;
@@ -677,6 +681,7 @@ template {
   }
 }
 
+/*  Cartes Menu */
 .dish {
   border-radius: 20px;
   overflow: hidden;
@@ -726,7 +731,7 @@ template {
   width: 0;
   overflow: hidden;
   background-color: #99e2d0;
-  transition: width 0.75s ease-in-out;
+  transition: width 0.6s ease-in-out;
 }
 .dish__selection--icon {
   padding: 0.3rem;
@@ -767,10 +772,8 @@ template {
 .heart-toggle:checked + .heart-label .full-heart {
   display: inline-block;
   background: linear-gradient(to top, #9356dc, #ff79da);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: transparent;
   background-clip: text;
-  color: #9356dc;
   animation: heartAnimation 0.3s ease-in-out;
 }
 
@@ -944,6 +947,7 @@ template {
   }
 }
 
+/*Location searching bar */
 main .location {
   display: flex;
   background-color: #eaeaea;
@@ -973,6 +977,7 @@ main .location__city {
   text-overflow: ellipsis;
 }
 
+/*Hero Banner */
 .hero {
   display: flex;
   flex-direction: column;
@@ -1015,6 +1020,7 @@ main .location__city {
   transform: scale(1.05);
 }
 
+/*Fonctionnement */
 .function {
   background-color: white;
   padding: 1.3rem 0;
@@ -1087,6 +1093,7 @@ main .location__city {
   line-height: normal;
 }
 
+/*container resturants */
 .restaurants {
   background-color: #f6f6f6;
   display: flex;
@@ -1103,6 +1110,7 @@ main .location__city {
   height: 21px;
 }
 
+/*Image menu*/
 .hero-menu img {
   width: 100%;
   min-height: 18rem;
@@ -1111,6 +1119,12 @@ main .location__city {
   object-fit: cover;
 }
 
+/*Menu container*/
+.menu {
+  display: block;
+  /*Border sous titre menu*/
+  /* Bouton de commande */
+}
 .menu__container {
   margin-top: -5rem;
   background-color: #f6f6f6;
@@ -1164,6 +1178,7 @@ main .location__city {
   flex-direction: column;
   gap: 1rem;
   opacity: 0;
+  /*Animation chargement menu items*/
 }
 .menu__bloc:nth-child(1) {
   animation: menu-pop 1.2s ease forwards;

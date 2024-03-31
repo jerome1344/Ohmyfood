@@ -1,4 +1,3 @@
-@use "sass:color";
 
 .fas {
   width: 1.25rem;
@@ -12,7 +11,7 @@
     padding: 1.88rem 13rem;
   }
 }
-
+/*Location searching bar */
 main .location {
   display: flex;
   background-color: $light-grey;
@@ -40,6 +39,7 @@ main .location {
     text-overflow: ellipsis;
   }
 }
+/*Hero Banner */
 
 .hero {
   display: flex;
@@ -68,6 +68,7 @@ main .location {
     margin: 1rem 0;
   }
 }
+/*Fonctionnement */
 
 .function {
   background-color: white;
@@ -117,7 +118,7 @@ main .location {
       font-size: 0.8rem;
     }
 
-    // Change le background au hover
+    // Change le background du cercle au hover
     // &:hover::before {
     //   background-color: $primary;
     // }
@@ -137,6 +138,7 @@ main .location {
     line-height: normal;
   }
 }
+/*container resturants */
 
 .restaurants {
   background-color: $secondary-background;

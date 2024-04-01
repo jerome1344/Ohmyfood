@@ -483,11 +483,6 @@ template {
   transform: scale(1.1);
   color: #9356dc;
 }
-@media screen and (min-width: 1024px) and (max-width: 1920px) {
-  .header__menu--arrow {
-    left: 18rem;
-  }
-}
 
 /*Footer*/
 .footer {

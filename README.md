@@ -1,6 +1,6 @@
-# Ohmyfood
+# Ohmyfood - Projet 3 - OpenClassrooms Intégrateur Web
 
-# Projet Restaurant - README
+![Maquette page d'accueil](./assets/maquette/homepage.png)
 
 ## Technologies Utilisées
 

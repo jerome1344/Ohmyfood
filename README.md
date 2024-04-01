@@ -1,6 +1,6 @@
 # Ohmyfood - Projet 3 - OpenClassrooms Intégrateur Web
 
-![Maquette page d'accueil](./assets/maquette/homepage.png)
+![Maquette page d'accueil](./Assets/maquette/homepage.png)
 
 ## Technologies Utilisées
 
